@@ -83,11 +83,21 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 
 // Write your code here
 function sumAndMultiply(a,b,c){ //eslint-disable-line
-
+    const firstSum = sum(a,b);
+    const firstProduct = multiply(a,b);
+    const finalSum = sum(firstSum[0], c);
+    const finalProduct = multiply(firstProduct[0], c);
+    
+    return [
+        finalSum[0],
+        finalProduct[0],
+        a + ' and ' + b + ' and ' + c + ' sum to ' + finalSum[0] + '.',
+        'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + finalProduct[0] + '.'
+    ];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 
 /////////////////////////////////////
@@ -113,7 +123,6 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 // Write your code here
 
 function sumArray(testArray){ //eslint-disable-line
-
 }
 
 // Here is the test for sumArray(); uncomment it to run it
