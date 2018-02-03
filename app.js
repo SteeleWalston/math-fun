@@ -123,10 +123,17 @@ IMPORTANT DETAIL! IMPORTANT DETAIL! IMPORTANT DETAIL!
 // Write your code here
 
 function sumArray(testArray){ //eslint-disable-line
+    const sumArray1 = sum(testArray[0], testArray[1]);
+    const finalArraySum = sum(sumArray1[0], testArray[2]);
+
+    return [
+        finalArraySum[0],
+        testArray[0] + ',' + testArray[1] + ',' + testArray[2] + ' was passed in as an array of numbers, and ' + finalArraySum[0] + ' is their sum.'
+    ];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
-// testSumArray();
+testSumArray();
 
 
 /////////////////////////////////////
